@@ -1,44 +1,44 @@
-//#include <iostream>
-//using namespace std;
-//
-///* Ê®½øÖÆ¸÷ÏîÇóºÍº¯Êı */
-//int f(int n)
-//{
-//	if (n / 10 != 0) { // ÈôÎªÁ½Î»Êı
-//
-//		return n % 10 + f(n / 10); // Ä©Î²Öµ¼ÓÉÏÈ¥µôÄ©Î²ºóµÄµİ¹éµ÷ÓÃ
-//	}
-//	else {
-//		return n;  // Ö±µ½½öÊ£1Î»
-//	}
-//}
-//
-///* ¶ş½øÖÆ¸÷ÏîÇóºÍº¯Êı */
-//int g(int n)
-//{
-//	if (n / 2 != 0) {
-//		return n % 2 + g(n / 2);
-//	}
-//	else {
-//		return 1;
-//	}
-//}
-//
-//
-//int main()
-//{
-//	int num, totalLuckyNumbers = 0;
-//	cout << "Please enter upper bound: ";
-//	cin >> num;
-//	for (int i = 1; i <= num; i++)
-//	{
-//		int decimal = f(i);
-//		if (decimal == g(i))
-//		{
-//			totalLuckyNumbers++;
-//			cout << " one of lucky numbers is: " << i << endl;
-//		}
-//	}
-//	cout << "The total number of lucky number is: " << totalLuckyNumbers << " ¸ö" << endl;
-//	return 0;
-//}
+#include <iostream>
+using namespace std;
+
+/* åè¿›åˆ¶å„é¡¹æ±‚å’Œå‡½æ•° */
+int f(int n)
+{
+	if (n / 10 != 0) { // è‹¥ä¸ºä¸¤ä½æ•°
+
+		return n % 10 + f(n / 10); // æœ«å°¾å€¼åŠ ä¸Šå»æ‰æœ«å°¾åçš„é€’å½’è°ƒç”¨
+	}
+	else {
+		return n;  // ç›´åˆ°ä»…å‰©1ä½
+	}
+}
+
+/* äºŒè¿›åˆ¶å„é¡¹æ±‚å’Œå‡½æ•° */
+int g(int n)
+{
+	if (n / 2 != 0) {
+		return n % 2 + g(n / 2);
+	}
+	else {
+		return 1;
+	}
+}
+
+
+int main()
+{
+	int num, totalLuckyNumbers = 0;
+	cout << "Please enter upper bound: ";
+	cin >> num;
+	for (int i = 1; i <= num; i++)
+	{
+		int decimal = f(i);
+		if (decimal == g(i))
+		{
+			totalLuckyNumbers++;
+			cout << " one of lucky numbers is: " << i << endl;
+		}
+	}
+	cout << "The total number of lucky number is: " << totalLuckyNumbers << " ä¸ª" << endl;
+	return 0;
+}
