@@ -82,9 +82,8 @@ int main() {
 
     int requestSequence[8] = { 98, 183, 37, 122, 14, 124, 65, 67 };
     int length = sizeof(requestSequence) / sizeof(requestSequence[0]);
-
     int c = 53;
-
+    
     ShortestSeekTimeFirst(requestSequence, c, length);
 	return 0;
 }
